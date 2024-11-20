@@ -1,0 +1,82 @@
+1. Anxiety
+GAD-7 (Generalized Anxiety Disorder-7)
+Purpose: Screens for generalized anxiety disorder (GAD) and measures severity.
+Structure: 7 questions scored 0–3 (same as PHQ-9).
+Scoring:
+0–4: Minimal anxiety.
+5–9: Mild anxiety.
+10–14: Moderate anxiety.
+15–21: Severe anxiety.
+2. Stress
+PSS (Perceived Stress Scale)
+Purpose: Measures the perception of stress.
+Structure: 10 questions assessing how often life situations have been appraised as stressful in the last month.
+Scoring: Based on responses from "Never" (0) to "Very Often" (4). Higher scores indicate higher stress levels.
+3. PTSD (Post-Traumatic Stress Disorder)
+PCL-5 (PTSD Checklist for DSM-5)
+Purpose: Screens for PTSD and assesses its severity.
+Structure: 20 items based on DSM-5 criteria.
+Scoring: Each symptom is rated on a scale of 0 (Not at all) to 4 (Extremely). A score above 31–33 suggests probable PTSD.
+4. Alcohol and Substance Use
+AUDIT (Alcohol Use Disorders Identification Test)
+
+Purpose: Screens for hazardous or harmful alcohol consumption.
+Structure: 10 questions about alcohol use patterns, behaviors, and consequences.
+Scoring:
+0–7: Low risk.
+8–15: Risky use.
+16–19: Harmful use.
+20+: Possible dependence.
+DAST-10 (Drug Abuse Screening Test)
+
+Purpose: Screens for drug use and abuse.
+Structure: 10 yes/no questions.
+Scoring:
+0: No issues.
+1–2: Low level.
+3–5: Moderate level.
+6–8: Substantial issues.
+9–10: Severe.
+5. General Mental Health
+GHQ-12 (General Health Questionnaire-12)
+
+Purpose: Measures overall mental well-being and distress.
+Structure: 12 items asking about recent symptoms of mental distress.
+Scoring: Responses range from 0 to 3. Higher scores suggest worse mental health.
+K-10 (Kessler Psychological Distress Scale)
+
+Purpose: Measures psychological distress over the past four weeks.
+Structure: 10 questions scored on a scale from 1 (None of the time) to 5 (All of the time).
+Scoring:
+10–19: Likely to be well.
+20–24: Mild distress.
+25–29: Moderate distress.
+30–50: Severe distress.
+6. Bipolar Disorder
+MDQ (Mood Disorder Questionnaire)
+Purpose: Screens for symptoms of bipolar disorder.
+Structure: Yes/No questions about mood swings, energy, and behavior changes.
+Scoring: Positive screens are based on symptom frequency, impact, and co-occurrence.
+7. Suicidal Risk
+Columbia-Suicide Severity Rating Scale (C-SSRS)
+Purpose: Assesses the severity of suicidal ideation and behavior.
+Structure: Questions about past thoughts, plans, and attempts.
+Use: Commonly used in clinical and emergency settings.
+8. Eating Disorders
+SCOFF Questionnaire
+Purpose: Screens for eating disorders like anorexia and bulimia.
+Structure: 5 yes/no questions.
+Scoring: Two or more "yes" answers indicate a likely eating disorder.
+9. ADHD
+ASRS (Adult ADHD Self-Report Scale)
+Purpose: Screens for attention-deficit/hyperactivity disorder (ADHD) in adults.
+Structure: 18 items reflecting ADHD symptoms, divided into inattentive and hyperactive/impulsive subcategories.
+10. Autism
+AQ-10 (Autism Spectrum Quotient-10)
+Purpose: Quick screening tool for autism spectrum disorder in adults.
+Structure: 10 statements scored on a scale of agreement. Higher scores indicate higher likelihood of autism.
+11. Overall Functionality
+WHODAS 2.0 (World Health Organization Disability Assessment Schedule)
+Purpose: Measures health and disability across six life domains.
+Structure: 12 or 36 items, covering cognition, mobility, self-care, relationships, life activities, and participation in society.
+Scoring: Higher scores indicate greater disability.

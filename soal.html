@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Page</title>
+    <link rel="stylesheet" href="soal.css">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="container">
+        <div id="wrap-heading">
+            <button class="nav-button">
+                <i class='bx bx-chevron-left'></i>
+            </button>
+            <p class="heading">Bagian 1</p>
+            <button class="nav-button">
+                <i class='bx bx-chevron-right'></i>
+            </button>
+        </div>
+
+        <div id="question-box">
+            <p id="question">apakah aku adalah manusia?</p>
+            <div class="scale">
+                <p>Disagree</p>
+                <button class="scale-item">
+                    <div class="circle red"></div>
+                </button>
+                <button class="scale-item">
+                    <div class="circle light-red"></div>
+                </button>
+                <button class="scale-item">
+                    <div class="circle gray"></div>
+                </button>
+                <button class="scale-item">
+                    <div class="circle light-blue"></div>
+                </button>
+                <button class="scale-item">
+                    <div class="circle blue"></div>
+                </button>
+                <p>Agree</p>
+            </div>
+        </div>
+
+        <div id="progress-bar">
+            <div class="progress"></div>
+            <div class="dropdown-icon"><i class='bx bxs-down-arrow'></i></div>
+        </div>
+    </div>
+    <script src="soal.js"></script>
+</body>
+
+</html>
