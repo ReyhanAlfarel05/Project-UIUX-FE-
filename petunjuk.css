@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('Group\ 29.svg'); 
+    background-color: #FFF5CD;
+    background-size:  contain; 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header {
+    padding: 50px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 1150px;
+    height: 500px;
+    background-color: #FFF2BE;
+    border: 2px solid #333;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.card p {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 750px;
+    
+}
+
+.back-button {
+    background-color: #A2D2FF;
+    border: 2px black solid;
+    height: 45px;
+    width: 200px;
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-button {
+    background-color: #A2D2FF;
+    border: 2px black solid;
+    height: 45px;
+    width: 200px;
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #007BFF;
+    color: #FFF;
+}
+
+.back-button:hover {
+    background-color: #007BFF;
+    color: #FFF;
+}
