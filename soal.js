@@ -18,15 +18,19 @@ scaleButtons.forEach((button) => {
 
 // Daftar soal
 const questions = [
-    { heading: "K-10", question: "Apakah aku adalah manusia?", answered: false, selectedAnswer: null },
-    { heading: "K-10", question: "Apakah kamu suka belajar?", answered: false, selectedAnswer: null },
-    { heading: "K-10", question: "Apakah kamu merasa bahagia hari ini?", answered: false, selectedAnswer: null },
-    { heading: "K-10", question: "Apakah kamu percaya pada takdir?", answered: false, selectedAnswer: null },
-    { heading: "K-10", question: "Apakah teknologi membantu kehidupanmu?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel tired out for no good reason?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel nervous?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel so nervous that nothing could calm you down?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel hopeless?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel restless or fidgety?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel so restless you could not sit still?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel depressed?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel that everything was an effort?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel so sad that nothing could cheer you up?", answered: false, selectedAnswer: null },
+    { question: "During the last 30 days, about how often did you feel worthless?", answered: false, selectedAnswer: null }
 ];
 
 // Elemen-elemen HTML
-const headingElement = document.querySelector(".heading");
 const questionElement = document.getElementById("question");
 const progressBarElement = document.getElementById("progress");
 const progressTextElement = document.getElementById("progress-text");
@@ -39,7 +43,6 @@ let currentIndex = 0;
 // Fungsi untuk memperbarui tampilan soal
 function updateQuestion() {
     const currentQuestion = questions[currentIndex];
-    headingElement.textContent = currentQuestion.heading;
     questionElement.textContent = currentQuestion.question;
 
     // Clear the "selected" state for all buttons
