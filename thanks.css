@@ -108,6 +108,29 @@ nav ul li a::after {
     text-align: justify;
  }
 
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .start-button {
+    background-color: #A2D2FF;
+    border: 2px black solid;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #007BFF;
+    color: #FFF;
+}
+
+
  footer {
     position: fixed;
     bottom: 10px;
