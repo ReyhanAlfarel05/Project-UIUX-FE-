@@ -46,6 +46,7 @@ h1 {
     padding-left: 20px;
     padding-top: 20px;
     margin-bottom: 5px; 
+    font-weight: bold;
 }
 
 .card p {
@@ -81,12 +82,16 @@ h1 {
     padding-left: 20px;
     padding-top: 20px;
     margin-bottom: 5px; 
+    font-weight: bold;
 }
 
 .card1 p {
-    font-size: 10px;
-    margin: 10px 0;
-    padding: 20px;
+    font-size: 15px; 
+    line-height: 1.6; 
+    padding:0 20px 20px 20px; 
+    margin: 0; 
+    text-align: justify; 
+    color: black
 }   
 
 .card-container2 {
@@ -112,14 +117,24 @@ h1 {
     color: black;
     padding-left: 20px;
     padding-top: 20px;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .card2 p {
-    font-size: 20px;
-    margin: 10px 0;
-    padding: 20px;
-}   
+    font-size: 15px; 
+    line-height: 1.6;
+    margin: 10px 0; 
+    padding:0 20px 0px 20px; 
+    display: flex;
+    align-items: center;
+}
+
+.card2 p i {
+    margin-right: 10px; 
+    font-size: 20px; /* Ukuran ikon */
+    color: #007BFF; /* Warna ikon */
+}
 
 .button-container {
     display: flex;
