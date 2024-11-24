@@ -116,24 +116,26 @@ body {
     /* Green for selected button */
 }
 
-/* Progress Bar */
+/* Container for the progress bar */
 .progress-bar {
-    position: relative;
     width: 100%;
-    background: #e0e0e0;
     height: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; /* Light background */
+    border: 2px solid black; /* Black border */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure progress is clipped within the border */
+    position: relative;
 }
 
+/* Progress bar itself */
 .progress {
+    width: 50%; /* Example: adjust this dynamically */
     height: 100%;
-    background: blue;
-    width: 0;
-    transition: width 0.3s ease;
+    background-color: #B7E0FF; /* Light blue color for progress */
+    border-radius: 15px 0 0 15px; /* Match border radius */
+    transition: width 0.3s ease; /* Smooth animation */
 }
+
 
 .progress-text {
     position: absolute;
