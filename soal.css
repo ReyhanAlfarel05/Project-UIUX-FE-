@@ -157,7 +157,6 @@ body {
     align-items: center;
     gap: 10px; /* Jarak antara progress bar dan tombol */
     width: 100%;
-    max-width: 500px;
     margin: 20px auto;
 }
 
