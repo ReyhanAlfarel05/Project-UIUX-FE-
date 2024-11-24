@@ -128,14 +128,52 @@ footer {
     right: 10px;
 }
 
-.info-icon i {
-    font-size: 25px; /* Ukuran ikon */
-    color: black; /* Warna awal ikon */
-    transition: color 0.3s ease; 
+.info-icon-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .info-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
     cursor: pointer;
-}
+    color: black;
+    padding: 8px;
+  }
+   .info-icon:hover {
+    color: #007BFF; 
+  }
 
-.info-icon:hover i {
-    color: #007BFF; /* Warna ikon saat hover */
-}
-
+  .popup-menu {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; 
+    z-index: 10;
+    width: 250px;
+  }
+   .popup-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+   .popup-menu ul li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+  }
+   .popup-menu ul li:last-child {
+    border-bottom: none;
+  }
+   .popup-menu ul li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+  }
+   .popup-menu ul li:hover {
+    background-color: #f9f9f9;
+  }
