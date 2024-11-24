@@ -43,6 +43,10 @@ body {
     cursor: not-allowed;
 }
 
+.nav-button i {
+    font-size: 24px; /* Increase icon size */
+}
+
 .heading {
     font-size: 24px;
     font-weight: bold;
