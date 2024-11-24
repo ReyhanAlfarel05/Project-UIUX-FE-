@@ -15,7 +15,13 @@ body {
 }
 
 header {
-    padding: 50px;
+    padding: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .card-container {
@@ -24,9 +30,16 @@ header {
     align-items: center;
 }
 
+.card-container1 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
     width: 1150px;
-    height: 500px;
+    height: 70px;
     background-color: #FFF2BE;
     border: 2px solid #333;
     border-radius: 20px;
@@ -34,16 +47,12 @@ header {
     justify-content: center;
 }
 
-.card h1 {
-    font-size: 36px;
-    text-align: center;
-    margin: 25px 0;
-}
-
 .card p {
-    font-size: 20px;
+    font-size: 17px;
+    padding: 10px;
     margin: 10px 0;
-    padding: 20px;
+    text-align: left;
+    font-weight: 400;
 }
 
 .button-container {
@@ -54,7 +63,7 @@ header {
 }
 
 .back-button {
-    background-color: #A2D2FF;
+    background-color: white;
     border: 2px black solid;
     height: 45px;
     width: 200px;
@@ -62,12 +71,12 @@ header {
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .start-button {
-    background-color: #A2D2FF;
+    background-color: white;
     border: 2px black solid;
     height: 45px;
     width: 200px;
@@ -75,7 +84,7 @@ header {
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
