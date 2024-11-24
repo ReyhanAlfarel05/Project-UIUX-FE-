@@ -222,3 +222,21 @@ body {
         font-size: 10px;
     }
 }
+
+#submit-button {
+    display: none; /* Hanya tampil saat soal terakhir */
+    margin: 20px auto; /* Tambahkan jarak atas dan bawah, serta tempatkan di tengah */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #278af3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  #submit-button:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+  }

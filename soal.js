@@ -18,36 +18,11 @@ scaleButtons.forEach((button) => {
 
 // Daftar soal
 const questions = [
-    {
-        heading: "Bagian 1",
-        question: "Apakah aku adalah manusia?",
-        answered: false, // Status apakah sudah dijawab
-        selectedAnswer: null
-    },
-    {
-        heading: "Bagian 1",
-        question: "Apakah kamu suka belajar?",
-        answered: false,
-        selectedAnswer: null
-    },
-    {
-        heading: "Bagian 1",
-        question: "Apakah kamu merasa bahagia hari ini?",
-        answered: false,
-        selectedAnswer: null
-    },
-    {
-        heading: "Bagian 1",
-        question: "Apakah kamu percaya pada takdir?",
-        answered: false,
-        selectedAnswer: null
-    },
-    {
-        heading: "Bagian 1",
-        question: "Apakah teknologi membantu kehidupanmu?",
-        answered: false,
-        selectedAnswer: null
-    },
+    { heading: "Nomor 1", question: "Apakah aku adalah manusia?", answered: false, selectedAnswer: null },
+    { heading: "Nomor 2", question: "Apakah kamu suka belajar?", answered: false, selectedAnswer: null },
+    { heading: "Nomor 3", question: "Apakah kamu merasa bahagia hari ini?", answered: false, selectedAnswer: null },
+    { heading: "Nomor 4", question: "Apakah kamu percaya pada takdir?", answered: false, selectedAnswer: null },
+    { heading: "Nomor 5", question: "Apakah teknologi membantu kehidupanmu?", answered: false, selectedAnswer: null },
 ];
 
 // Elemen-elemen HTML
@@ -56,6 +31,7 @@ const questionElement = document.getElementById("question");
 const progressBarElement = document.getElementById("progress");
 const progressTextElement = document.getElementById("progress-text");
 const navButtons = document.querySelectorAll(".nav-button");
+const submitButton = document.getElementById("submit-button");
 
 // Variabel untuk melacak soal aktif
 let currentIndex = 0;
@@ -85,6 +61,14 @@ function updateQuestion() {
     // Update navigation button states
     navButtons[0].disabled = currentIndex === 0;
     navButtons[1].disabled = currentIndex === questions.length - 1;
+
+    // Show Submit button only on the last question
+    if (currentIndex === questions.length - 1) {
+        submitButton.style.display = "block";
+        submitButton.disabled = !questions[currentIndex].answered; // Enable if answered
+    } else {
+        submitButton.style.display = "none";
+    }
 }
 
 // Fungsi untuk memperbarui progress bar
@@ -130,8 +114,24 @@ scaleButtons.forEach((button, index) => {
 
         // Update the progress bar
         updateProgressBar();
+
+        // Enable submit button if on the last question
+        if (currentIndex === questions.length - 1) {
+            submitButton.disabled = false;
+        }
     });
 });
+
+// Event listener untuk tombol submit
+submitButton.addEventListener("click", () => {
+    if (!submitButton.disabled) {
+        // Alihkan ke halaman terima kasih
+        window.location.href = "thanks.html";
+    } else {
+        alert("Jawab semua pertanyaan sebelum submit!");
+    }
+});
+
 
 // Inisialisasi soal pertama
 updateQuestion();
