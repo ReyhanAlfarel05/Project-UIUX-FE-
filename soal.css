@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Product Sans', sans-serif;
@@ -21,7 +22,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 .nav-button {
     background-color: white;
     border: 2px solid black;
@@ -31,6 +31,16 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
 }
 
 .heading {
@@ -50,6 +60,8 @@ body {
 
 #question {
     margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .scale {
@@ -72,6 +84,11 @@ body {
     border-radius: 50%;
     display: inline-block;
     border: 2px solid black;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.circle:hover {
+    transform: scale(1.1);
 }
 
 .red {
@@ -100,60 +117,106 @@ body {
 }
 
 /* Progress Bar */
-#progress-bar {
-    width: 100%;
-    height: 20px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
+.progress-bar {
     position: relative;
+    width: 100%;
+    background: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
     overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .progress {
-    width: 50%;
-    /* Adjust this value to set progress */
     height: 100%;
-    background-color: #8EB5F2;
+    background: blue;
+    width: 0;
+    transition: width 0.3s ease;
 }
 
-.dropdown-icon {
+.progress-text {
     position: absolute;
-    right: 5px; 
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 12px;
-    pointer-events: none;
+    font-weight: bold;
+    color: #333;
 }
 
-.container {
+/* Navigation Buttons */
+.container2 {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Jarak antara progress bar dan tombol */
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 .nav-btn {
-    background-color: #add8e6; 
+    background-color: #ADD8E6;
     border: 2px solid black;
     border-radius: 8px;
     padding: 10px 20px;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
     color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: #87CEEB;
+    transform: scale(1.05);
+}
+
+.nav-btn:disabled {
+    background-color: #D3D3D3;
+    cursor: not-allowed;
+}
+
+/* Utility Button */
+.button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.nav-btn:hover {
-    background-color: #87ceeb; 
+.button:hover {
+    background-color: #0056b3;
 }
 
-.nav-btn:disabled {
-    background-color: #d3d3d3; 
-    cursor: not-allowed;
-}
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #container {
+        width: 100%;
+        padding: 10px;
+    }
 
-.display-text {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-}
+    .circle {
+        width: 30px;
+        height: 30px;
+    }
 
+    .heading {
+        font-size: 20px;
+    }
+
+    #question {
+        font-size: 16px;
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+
+    .progress-text {
+        font-size: 10px;
+    }
+}
