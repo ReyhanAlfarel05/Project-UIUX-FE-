@@ -79,10 +79,17 @@ function updateProgressBar() {
     const answeredCount = questions.filter((q) => q.answered).length;
     const progressPercentage = (answeredCount / questions.length) * 100;
 
-    // Update progress bar
+    // Update the blue progress bar width
     progressBarElement.style.width = `${progressPercentage}%`;
+
+    // Update the progress percentage text
     progressTextElement.textContent = `${progressPercentage.toFixed(0)}%`;
+
+    // Dynamically position the percentage text inside the blue bar
+    progressTextElement.style.left = `calc(${progressPercentage}% - 10px)`; // Offset to keep text inside the bar
 }
+
+
 
 // Fungsi untuk memeriksa apakah tombol submit bisa diaktifkan
 function checkSubmitEligibility() {

@@ -141,14 +141,18 @@ body {
 }
 
 .progress-text {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-  font-weight: bold;
-  color: #333;
+    position: absolute;
+    top: 50%; /* Center vertically within the bar */
+    transform: translate(-100%, -50%); /* Align to the right inside the blue bar */
+    font-size: 12px;
+    font-weight: bold;
+    color: black; /* Ensure contrast with the blue bar */
+    pointer-events: none; /* Prevent interaction with the text */
+    z-index: 1; /* Ensure it appears above the bar */
+    transition: left 0.3s ease; /* Smooth transition for left position */
 }
+
+
 
 /* Navigation Buttons */
 .container2 {
