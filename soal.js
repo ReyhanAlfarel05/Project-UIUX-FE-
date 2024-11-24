@@ -18,11 +18,11 @@ scaleButtons.forEach((button) => {
 
 // Daftar soal
 const questions = [
-    { heading: "Nomor 1", question: "Apakah aku adalah manusia?", answered: false, selectedAnswer: null },
-    { heading: "Nomor 2", question: "Apakah kamu suka belajar?", answered: false, selectedAnswer: null },
-    { heading: "Nomor 3", question: "Apakah kamu merasa bahagia hari ini?", answered: false, selectedAnswer: null },
-    { heading: "Nomor 4", question: "Apakah kamu percaya pada takdir?", answered: false, selectedAnswer: null },
-    { heading: "Nomor 5", question: "Apakah teknologi membantu kehidupanmu?", answered: false, selectedAnswer: null },
+    { heading: "K-10", question: "Apakah aku adalah manusia?", answered: false, selectedAnswer: null },
+    { heading: "K-10", question: "Apakah kamu suka belajar?", answered: false, selectedAnswer: null },
+    { heading: "K-10", question: "Apakah kamu merasa bahagia hari ini?", answered: false, selectedAnswer: null },
+    { heading: "K-10", question: "Apakah kamu percaya pada takdir?", answered: false, selectedAnswer: null },
+    { heading: "K-10", question: "Apakah teknologi membantu kehidupanmu?", answered: false, selectedAnswer: null },
 ];
 
 // Elemen-elemen HTML
@@ -65,7 +65,7 @@ function updateQuestion() {
     // Show Submit button only on the last question
     if (currentIndex === questions.length - 1) {
         submitButton.style.display = "block";
-        submitButton.disabled = !questions[currentIndex].answered; // Enable if answered
+        checkSubmitEligibility(); // Check eligibility dynamically
     } else {
         submitButton.style.display = "none";
     }
@@ -79,6 +79,20 @@ function updateProgressBar() {
     // Update progress bar
     progressBarElement.style.width = `${progressPercentage}%`;
     progressTextElement.textContent = `${progressPercentage.toFixed(0)}%`;
+}
+
+// Fungsi untuk memeriksa apakah tombol submit bisa diaktifkan
+function checkSubmitEligibility() {
+    const allAnswered = questions.every((q) => q.answered); // Semua pertanyaan harus dijawab
+    const answeredCount = questions.filter((q) => q.answered).length;
+    const progressPercentage = (answeredCount / questions.length) * 100;
+
+    // Periksa progres 100% sebelum mengaktifkan tombol
+    if (allAnswered && progressPercentage === 100) {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
 }
 
 // Event listener untuk tombol navigasi
@@ -115,10 +129,8 @@ scaleButtons.forEach((button, index) => {
         // Update the progress bar
         updateProgressBar();
 
-        // Enable submit button if on the last question
-        if (currentIndex === questions.length - 1) {
-            submitButton.disabled = false;
-        }
+        // Check if submit button can be enabled
+        checkSubmitEligibility();
     });
 });
 
