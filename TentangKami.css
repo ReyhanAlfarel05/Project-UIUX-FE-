@@ -89,8 +89,16 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 92px;
+    gap: 50px;
     margin-top: 60px;
+}
+
+.card-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:50px;
+    margin-top: 30px;
 }
 
 .card {
@@ -104,6 +112,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
@@ -123,39 +133,11 @@ h1 {
     font-size: 17px;
     color: #666;    
 }
-/* 
-.card1 {
-    width: 250px;
-    height: 250px;
-    padding: 20px;
-    background-color: #FFF2BC;
-    border: 2px solid #333;
-    border-radius: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
-
-
-.card1 img {
-    width: 60px;
-    height: 60px;
-    background-color: #DDD;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.card1 h3 {
-    font-size: 15px;
-    margin-bottom: 5px;
-}
-
-.card1 p {
-    font-size: 13px;
-    color: #666;    
-} */
 
 footer {
     position: fixed;
@@ -163,15 +145,49 @@ footer {
     right: 10px;
 }
 
-.info-icon i {
-    font-size: 25px; /* Ukuran ikon */
-    color: black; /* Warna awal ikon */
-    transition: color 0.3s ease; 
+.info-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
     cursor: pointer;
-}
+    color: black;
+    padding: 8px;
+  }
+   .info-icon:hover {
+    color: #007BFF; 
+  }
 
-.info-icon:hover i {
-    color: #007BFF;
-}
-
+  .popup-menu {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; 
+    z-index: 10;
+    width: 250px;
+  }
+   .popup-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+   .popup-menu ul li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+  }
+   .popup-menu ul li:last-child {
+    border-bottom: none;
+  }
+   .popup-menu ul li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+  }
+   .popup-menu ul li:hover {
+    background-color: #f9f9f9;
+  }
+ 
 

@@ -112,8 +112,8 @@ h1 {
 }
 
 .card:hover {
-    transform: scale(1.05); /* Memperbesar sedikit kartu */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Memperbesar efek bayangan */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .material-icons {
@@ -221,7 +221,7 @@ footer {
     position: relative;
     display: inline-block;
   }
-   /* Styling for the info icon */
+
   .info-icon {
     background-color: transparent;
     border: none;
