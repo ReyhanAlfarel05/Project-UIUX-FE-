@@ -186,3 +186,13 @@ nav ul li a::after {
    .popup-menu ul li:hover {
     background-color: #f9f9f9;
   }
+
+  #total-points {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #diagnosis {
+    text-align: center;
+    font-size: 25px;
+  }

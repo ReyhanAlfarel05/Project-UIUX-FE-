@@ -158,3 +158,49 @@ submitButton.addEventListener("click", () => {
 // Inisialisasi soal pertama
 updateQuestion();
 updateProgressBar();
+
+// Fungsi untuk menghitung total poin
+function calculateTotalPoints() {
+    let totalPoints = 0;
+
+    questions.forEach((question) => {
+        if (question.selectedAnswer !== null) {
+            // Jawaban dipilih, tambahkan poinnya (index + 1 karena skala mulai dari 1)
+            totalPoints += question.selectedAnswer + 1;
+        }
+    });
+
+    return totalPoints;
+}
+
+// Fungsi untuk menentukan diagnosa berdasarkan poin
+function getDiagnosis(points) {
+    if (points <= 20) {
+        return "Stres Anda rendah, semuanya tampak baik-baik saja.";
+    } else if (points <= 35) {
+        return "Anda mengalami stres sedang. Perhatikan kesehatan mental Anda dan coba kelola stres dengan baik.";
+    } else {
+        return "Stres Anda tinggi. Disarankan untuk mencari bantuan profesional untuk mendiskusikan kondisi Anda.";
+    }
+}
+
+// Event listener untuk tombol submit
+submitButton.addEventListener("click", () => {
+    if (!submitButton.disabled) {
+        // Hitung total poin
+        const totalPoints = calculateTotalPoints();
+
+        // Tentukan diagnosa berdasarkan poin
+        const diagnosis = getDiagnosis(totalPoints);
+
+        // Simpan diagnosa di localStorage
+        localStorage.setItem("diagnosis", diagnosis);
+        localStorage.setItem("totalPoints", totalPoints);
+
+        // Alihkan ke halaman terima kasih
+        window.location.href = "thanks.html";
+    } else {
+        alert("Jawab semua pertanyaan sebelum submit!");
+    }
+});
+
