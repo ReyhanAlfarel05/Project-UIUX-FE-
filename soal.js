@@ -121,6 +121,7 @@ navButtons[1].addEventListener("click", () => {
 });
 
 // Event listener untuk tombol skala
+// Event listener for scale buttons
 scaleButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
         // Save the selected answer for the current question
@@ -139,8 +140,16 @@ scaleButtons.forEach((button, index) => {
         // Update the progress bar
         updateProgressBar();
 
-        // Check if submit button can be enabled
-        checkSubmitEligibility();
+        // Automatically proceed to the next question with a delay
+        setTimeout(() => {
+            if (currentIndex < questions.length - 1) {
+                currentIndex++;
+                updateQuestion();
+            } else {
+                // If it's the last question, enable the submit button
+                checkSubmitEligibility();
+            }
+        }, 500); // Delay of 500ms
     });
 });
 
