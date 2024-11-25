@@ -41,6 +41,7 @@ const submitButton = document.getElementById("submit-button");
 let currentIndex = 0;
 
 // Fungsi untuk memperbarui tampilan soal
+// Ensure the submit button appears and is enabled on the last question
 function updateQuestion() {
     const currentQuestion = questions[currentIndex];
     questionElement.textContent = currentQuestion.question;
@@ -65,12 +66,12 @@ function updateQuestion() {
     navButtons[0].disabled = currentIndex === 0;
     navButtons[1].disabled = currentIndex === questions.length - 1;
 
-    // Show Submit button only on the last question
+    // Make the Submit button visible only on the last question
     if (currentIndex === questions.length - 1) {
-        submitButton.style.display = "block";
-        checkSubmitEligibility(); // Check eligibility dynamically
+        submitButton.classList.add("visible"); // Make the button visible
+        submitButton.disabled = !questions.every((q) => q.answered); // Enable only if all questions are answered
     } else {
-        submitButton.style.display = "none";
+        submitButton.classList.remove("visible"); // Hide the button but keep its space
     }
 }
 

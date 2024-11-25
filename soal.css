@@ -243,8 +243,9 @@ body {
 }
 
 #submit-button {
-  display: none; /* Hanya tampil saat soal terakhir */
-  margin: 20px auto; /* Tambahkan jarak atas dan bawah, serta tempatkan di tengah */
+  visibility: hidden; /* Hide the button initially but keep its space in the layout */
+  opacity: 0; /* Fully transparent when hidden */
+  margin: 20px auto; /* Center horizontally */
   padding: 10px 20px;
   font-size: 16px;
   background-color: #a2d2ff;
@@ -252,7 +253,18 @@ body {
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth fade-in/out */
+}
+
+#submit-button.visible {
+  visibility: visible; /* Make it visible */
+  opacity: 1; /* Fully opaque when visible */
+}
+
+#submit-button:hover:enabled {
+  background-color: #007bff;
+  color: #fff;
 }
 
 #submit-button:hover {
