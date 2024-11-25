@@ -41,7 +41,7 @@ const submitButton = document.getElementById("submit-button");
 let currentIndex = 0;
 
 // Fungsi untuk memperbarui tampilan soal
-// Ensure the submit button appears and is enabled on the last question
+// Function to update question and manage button states
 function updateQuestion() {
     const currentQuestion = questions[currentIndex];
     questionElement.textContent = currentQuestion.question;
@@ -59,19 +59,19 @@ function updateQuestion() {
         circle.classList.add("selected");
     }
 
-    // Re-enable all buttons
-    scaleButtons.forEach((btn) => btn.disabled = false);
+    // Enable all scale buttons for previously answered questions (allow changing answers)
+    scaleButtons.forEach((btn) => btn.disabled = false);  // Enable buttons to change the answer
 
     // Update navigation button states
     navButtons[0].disabled = currentIndex === 0;
     navButtons[1].disabled = currentIndex === questions.length - 1;
 
-    // Make the Submit button visible only on the last question
+    // Show the Submit button only on the last question
     if (currentIndex === questions.length - 1) {
-        submitButton.classList.add("visible"); // Make the button visible
+        submitButton.classList.add("visible"); // Make it visible
         submitButton.disabled = !questions.every((q) => q.answered); // Enable only if all questions are answered
     } else {
-        submitButton.classList.remove("visible"); // Hide the button but keep its space
+        submitButton.classList.remove("visible");
     }
 }
 
@@ -123,34 +123,52 @@ navButtons[1].addEventListener("click", () => {
 
 // Event listener untuk tombol skala
 // Event listener for scale buttons
+// Event listener for scale buttons
 scaleButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
-        // Save the selected answer for the current question
-        questions[currentIndex].answered = true;
-        questions[currentIndex].selectedAnswer = index; // Save the index of the selected button
+        // If the question hasn't been answered yet, mark it as answered and save the selected answer
+        if (!questions[currentIndex].answered) {
+            questions[currentIndex].answered = true;
+            questions[currentIndex].selectedAnswer = index; // Save the index of the selected button
 
-        // Highlight the selected button
-        scaleButtons.forEach((btn) => {
-            const circle = btn.querySelector(".circle");
-            circle.classList.remove("selected");
-        });
+            // Highlight the selected button
+            scaleButtons.forEach((btn) => {
+                const circle = btn.querySelector(".circle");
+                circle.classList.remove("selected");
+            });
 
-        const circle = button.querySelector(".circle");
-        circle.classList.add("selected");
+            const circle = button.querySelector(".circle");
+            circle.classList.add("selected");
 
-        // Update the progress bar
-        updateProgressBar();
+            // Update the progress bar
+            updateProgressBar();
 
-        // Automatically proceed to the next question with a delay
-        setTimeout(() => {
-            if (currentIndex < questions.length - 1) {
-                currentIndex++;
-                updateQuestion();
-            } else {
-                // If it's the last question, enable the submit button
-                checkSubmitEligibility();
-            }
-        }, 500); // Delay of 500ms
+            // Automatically go to the next question after a delay
+            setTimeout(() => {
+                if (currentIndex < questions.length - 1) {
+                    currentIndex++;
+                    updateQuestion();
+                } else {
+                    // If it's the last question, check if submit button should be enabled
+                    checkSubmitEligibility();
+                }
+            }, 500); // 500ms delay before moving to the next question
+        } else {
+            // If the question is already answered, allow changing the answer
+            questions[currentIndex].selectedAnswer = index;
+
+            // Highlight the selected button (allow changing the answer)
+            scaleButtons.forEach((btn) => {
+                const circle = btn.querySelector(".circle");
+                circle.classList.remove("selected");
+            });
+
+            const circle = button.querySelector(".circle");
+            circle.classList.add("selected");
+
+            // Update the progress bar after changing the answer
+            updateProgressBar();
+        }
     });
 });
 
