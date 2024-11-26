@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="result.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const diagnosis = localStorage.getItem("diagnosis");
+                const totalPoints = localStorage.getItem("totalPoints");
+        
+                document.getElementById("diagnosis").textContent = `${diagnosis}`;
+                document.getElementById("total-points").textContent = `${totalPoints}`;
+            });
+        </script>
+        
+    </head>
+    
+<body>  
+    <div class="card-container">
+        <div class="card">
+            <h1 class="result">Result</h1>
+            <h1 class="poin">Total Poin Anda:</h1>
+            <p id="total-points"></p>
+            <h1 class="indikasi">Indikasi Kesehatan Mental:</h1>
+            <p id="diagnosis"></p>
+        </div>
+    </div>
+    <div class="button-container">
+        <a href="thanks.html"><button class="start-button">Selesai</button></a>
+    </div>
+    <footer>
+        <script src="index.js"></script>
+        
+    </footer>   
+</html>

@@ -176,7 +176,7 @@ scaleButtons.forEach((button, index) => {
 submitButton.addEventListener("click", () => {
     if (!submitButton.disabled) {
         // Alihkan ke halaman terima kasih
-        window.location.href = "thanks.html";
+        window.location.href = "result.html";
     } else {
         alert("Jawab semua pertanyaan sebelum submit!");
     }
@@ -226,7 +226,7 @@ submitButton.addEventListener("click", () => {
         localStorage.setItem("totalPoints", totalPoints);
 
         // Alihkan ke halaman terima kasih
-        window.location.href = "thanks.html";
+        window.location.href = "result.html";
     } else {
         alert("Jawab semua pertanyaan sebelum submit!");
     }
