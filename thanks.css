@@ -192,32 +192,3 @@ nav ul li a::after {
    .popup-menu ul li:hover {
     background-color: #f9f9f9;
   }
-
-.card .result {
-    font-size: 52px;
-    font-weight: 600;
-}
-
-.card .poin {
-    text-align: center;
-    font-size: 40px;
-    margin-top: 10px;
-}
-
-  #total-points {
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    color: red;
-  }
-
-.card .indikasi {
-    text-align: center;
-    font-size: 40px;
-    margin-top: -10px;
-}
-
-  #diagnosis {
-    text-align: center;
-    font-size: 23px;
-  }
