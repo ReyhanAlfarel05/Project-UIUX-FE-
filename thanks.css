@@ -78,8 +78,14 @@ nav ul li a::after {
     color:white;
 }
 
+.result {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .card-container {
-    margin-top: 80px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,12 +193,31 @@ nav ul li a::after {
     background-color: #f9f9f9;
   }
 
+.card .result {
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.card .poin {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
   #total-points {
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
   }
+
+.card .indikasi {
+    text-align: center;
+    font-size: 40px;
+    margin-top: -10px;
+}
 
   #diagnosis {
     text-align: center;
-    font-size: 25px;
+    font-size: 23px;
   }
