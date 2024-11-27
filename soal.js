@@ -203,14 +203,17 @@ function calculateTotalPoints() {
 
 // Fungsi untuk menentukan diagnosa berdasarkan poin
 function getDiagnosis(points) {
-    if (points <= 20) {
-        return "Stres Anda rendah, semuanya tampak baik-baik saja.";
-    } else if (points <= 35) {
-        return "Anda mengalami stres sedang. Perhatikan kesehatan mental Anda dan coba kelola stres dengan baik.";
+    if (points <= 19) {
+        return "Anda memiliki tingkat stres rendah. Semuanya tampak baik-baik saja.";
+    } else if (points <= 24) {
+        return "Anda memiliki tingkat stres sedang. Perhatikan kesejahteraan mental Anda dan coba kelola stres dengan baik.";
+    } else if (points <= 29) {
+        return "Anda memiliki tingkat stres tinggi. Pertimbangkan untuk mencari dukungan atau berbicara dengan seseorang yang dipercaya.";
     } else {
-        return "Stres Anda tinggi. Disarankan untuk mencari bantuan profesional untuk mendiskusikan kondisi Anda.";
+        return "Anda memiliki tingkat stres sangat tinggi. Disarankan untuk segera mencari bantuan profesional untuk mendiskusikan kondisi Anda.";
     }
 }
+
 
 // Event listener untuk tombol submit
 submitButton.addEventListener("click", () => {
